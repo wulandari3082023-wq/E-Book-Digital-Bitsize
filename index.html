@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-book Digital Bitsize</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <div class="logo">Bitsize</div>
+    <div>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('about')">About</a>
+        <a href="#" onclick="showPage('produk')">Produk</a>
+        <a href="#" onclick="showPage('kontak')">Kontak</a>
+    </div>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page">
+    <section class="hero">
+        <h1>E-book Digital Bitsize</h1>
+        <p>Bitsize adalah e-book interaktif untuk generasi Z dengan ringkasan materi penting dan visual menarik.</p>
+    </section>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page" style="display:none;">
+    <div class="container">
+        <h2>About</h2>
+        <p><b>Nama Usaha:</b> E-book Digital Bitsize</p>
+        <p>E-book ini membantu siswa memahami materi sekaligus meningkatkan motivasi belajar.</p>
+        <p><b>Visi:</b> Menjadi e-book terbaik</p>
+        <p><b>Misi:</b> Materi ringkas & menarik</p>
+    </div>
+</div>
+
+<!-- PRODUK -->
+<div id="produk" class="page" style="display:none;">
+    <div class="container">
+        <h2>Produk</h2>
+        <div class="card">
+            <h3>UTBK Express</h3>
+            <p>Ringkasan cepat</p>
+            <p>Rp25.000</p>
+        </div>
+        <div class="card">
+            <h3>Belajar Visual</h3>
+            <p>Ilustrasi menarik</p>
+            <p>Rp30.000</p>
+        </div>
+        <div class="card">
+            <h3>Motivasi Pelajar</h3>
+            <p>Panduan belajar</p>
+            <p>Rp20.000</p>
+        </div>
+    </div>
+</div>
+
+<!-- KONTAK -->
+<div id="kontak" class="page" style="display:none;">
+    <div class="container">
+        <h2>Kontak</h2>
+        <form onsubmit="kirimData(event)">
+            <input type="text" id="nama" placeholder="Nama" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <button type="submit">Kirim</button>
+        </form>
+        <div id="hasil"></div>
+    </div>
+</div>
+
+<script>
+function showPage(page){
+    document.querySelectorAll('.page').forEach(p => p.style.display='none');
+    document.getElementById(page).style.display='block';
+}
+
+function kirimData(e){
+    e.preventDefault();
+    let nama = document.getElementById('nama').value;
+    let email = document.getElementById('email').value;
+
+    document.getElementById('hasil').innerHTML = `
+    <div class='card'>
+    <h3>Data Terkirim</h3>
+    <p>Nama: ${nama}</p>
+    <p>Email: ${email}</p>
+    </div>`;
+}
+</script>
+
+</body>
+</html>
