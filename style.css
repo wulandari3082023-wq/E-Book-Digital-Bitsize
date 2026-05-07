@@ -1,41 +1,14 @@
-body {
-    font-family: Arial;
-    margin:0;
-    background:#f5f7fb;
+/* PRODUK */
+.card h3{
+    font-family: Georgia, serif;
+    color:#4f46e5;
 }
 
-nav {
-    display:flex;
-    justify-content:space-between;
-    background:#4f46e5;
-    padding:15px;
+.card p{
+    line-height:1.6;
 }
 
-.logo {
-    color:white;
-    font-weight:bold;
-}
-
-nav a {
-    color:white;
-    margin:10px;
-    text-decoration:none;
-}
-
-.hero {
-    text-align:center;
-    padding:60px;
-    background:#6366f1;
-    color:white;
-}
-
-.container {
-    padding:20px;
-}
-
-.card {
-    background:white;
-    padding:15px;
-    margin:10px 0;
-    border-radius:10px;
+.card img{
+    height:220px;
+    object-fit:cover;
 }
